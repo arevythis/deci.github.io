@@ -19,7 +19,7 @@ body, html {
       }
       .navbar ul li{
           list-style: none;
-          display: inline-block;
+          display:block;
           margin: 0 10px;
           position: relative;
       }
