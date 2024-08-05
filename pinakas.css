@@ -133,9 +133,8 @@ th, td {
 }
 
 @media (max-width: 480px) {
-    .navbar ul li {
-        display:inline-block;
-        margin: 10px 0;
+     .navbar {
+        padding: 10px 0;
     }
 
     .content {
