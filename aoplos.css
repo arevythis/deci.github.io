@@ -16,9 +16,7 @@ body, html {
           width: 85%;
           margin: auto;
           padding: 35px 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+        
       }
       .navbar ul li{
           list-style: none;
@@ -66,7 +64,7 @@ body, html {
       .video{
           position:absolute;
   bottom:10%;
-  left:35%;
+  left:50%;
       }
       .copy{
           position:absolute;
@@ -74,3 +72,7 @@ body, html {
           left:46%;
           color: #fff;
       }
+    @media only screen and (max-width:500px) {
+        .navbar, .content, .video {
+          width: 100%;}
+        }
