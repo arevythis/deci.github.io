@@ -16,9 +16,7 @@ body, html {
           width: 85%;
           margin: auto;
           padding: 35px 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+  
       }
       .navbar ul li{
           list-style: none;
@@ -105,6 +103,10 @@ body, html {
       .copy{
           position:absolute;
           bottom:0px;
-          left:46%;
+          left:50%;
           color: #fff;
       }
+    @media only screen and (max-width:500px) {
+        .navbar, .content, .button {
+          width: 100%;}
+        }
