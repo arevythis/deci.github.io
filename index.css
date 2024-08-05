@@ -23,14 +23,13 @@ body, html {
       }
       .navbar ul li{
           list-style: none;
-          display:block;
+          display:inline-block;
           margin: 0 10px;
           position: relative;
       }
 .navbar ul {
     padding: 0;
     margin: 0;
-}
 }
       .navbar ul li a{
           text-decoration: none;
