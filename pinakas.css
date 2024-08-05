@@ -106,15 +106,9 @@ th, td {
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        width: 100%;
-        padding: 10px 0;
-    }
-
     .navbar ul li {
-        display: block;
+        display:inline-block;
         margin: 10px 0;
-    }
 
     .content {
         top: 40%;
