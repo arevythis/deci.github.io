@@ -41,7 +41,7 @@ body, html {
           height: 3px;
           width: 0;
           background: #009688;
-          position: absolute;
+          position: auto;
           left: 0;
           bottom: -10px;
           transition: 0.5s;
