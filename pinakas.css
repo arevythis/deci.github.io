@@ -1,12 +1,12 @@
 body, html {
     height: 100%;
     margin: 0;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
 }
 
 .banner {
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
-    min-height: 100%; /* Ensure the banner covers at least the viewport height */
+    min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,12 +20,12 @@ body, html {
     width: 100%;
     padding: 20px 0;
     text-align: center;
-    position: fixed; /* Fixed to top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    z-index: 1000; /* Ensure it stays on top */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -69,9 +69,9 @@ body, html {
     text-align: center;
     color: #fff;
     padding: 20px 10px;
-    margin-top: 80px; /* Adjust for the fixed navbar height */
+    margin-top: 80px;
     z-index: 900;
-    flex: 1; /* Allow to grow and shrink */
+    flex: 1;
 }
 
 .content p {
@@ -88,7 +88,7 @@ body, html {
     padding: 10px;
     text-align: center;
     overflow: hidden;
-    position: relative; /* Relative positioning for proper layout flow */
+    position: relative;
     z-index: 800;
 }
 
@@ -118,7 +118,7 @@ th, td {
     }
 
     .content {
-        margin-top: 60px; /* Adjust for the fixed navbar height */
+        margin-top: 60px;
         padding: 10px;
     }
 
@@ -145,7 +145,7 @@ th, td {
     }
 
     .content {
-        margin-top: 60px; /* Adjust for the fixed navbar height */
+        margin-top: 60px;
         padding: 10px;
     }
 
