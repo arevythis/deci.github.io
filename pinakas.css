@@ -58,19 +58,10 @@ body, html {
           text-align: center;
           color:#fff;
            padding: 0 10px;
+          z-index: 900;
    
       }
 
-.content {
-    width: 100%;
-    position: absolute;
-    top: 30%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    padding: 0 10px;
-    z-index: 900;
-}
 
 .content p {
     margin: 20px auto;
