@@ -9,16 +9,14 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
 }
     .navbar{
      width: 100%;
     margin: auto;
     padding: 20px 0;
     text-align: center;
-    position: relative;
+    position:absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -55,13 +53,12 @@ body, html {
       }
       .content{
           width:100%;
-          position: relative;
+          position: absolute;
           top:50%;
           transform: translateY(-50%);
           text-align: center;
           color:#fff;
            padding: 0 10px;
-          z-index: 900;
           margin-top:60px;
    
       }
@@ -75,7 +72,7 @@ body, html {
 }
 
 .chart {
-    position: relative;
+    position: absolute;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
@@ -83,7 +80,7 @@ body, html {
     color: #fff;
     padding: 10px;
     text-align: center;
-    z-index: 800;
+   overflow:hidden;
 }
 
 th, td {
