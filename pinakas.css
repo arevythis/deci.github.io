@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    overflow-x:hidden;
 }
 
 .banner {
@@ -59,7 +60,7 @@ body, html {
           text-align: center;
           color:#fff;
            padding: 0 10px;
-          margin-top:60px;
+         border-sizing:border-box;
    
       }
 
