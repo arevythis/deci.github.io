@@ -1,77 +1,67 @@
 body, html {
     height: 100%;
     margin: 0;
-    overflow: auto; /* Enable scrolling */
 }
 
 .banner {
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
-    min-height: 100%; /* Ensure the banner covers at least the viewport height */
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
-
-.navbar {
-    width: 100%;
+    .navbar{
+     width: 100%;
     margin: auto;
     padding: 20px 0;
     text-align: center;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-}
-
+      }
+      .navbar ul li{
+          list-style: none;
+          display:inline-block;
+          margin: 0 10px;
+          position: relative;
+      }
 .navbar ul {
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
+      .navbar ul li a{
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+  
+      }
+      .navbar ul li::after{
+          content: '';
+          height: 3px;
+          width: 0;
+          background: #009688;
+          position: auto;
+          left: 0;
+          bottom: -10px;
+          transition: 0.5s;
+  
+      }
+      .navbar ul li:hover:after{
+          width: 100%;
+      }
+      .content{
+          width:100%;
+          position: absolute;
+          top:50%;
+          transform: translateY(-50%);
+          text-align: center;
+          color:#fff;
+           padding: 0 10px;
+          z-index: 900;
+   
+      }
 
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 10px;
-    position: relative;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-}
-
-.navbar ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar ul li:hover::after {
-    width: 100%;
-}
-
-.content {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    padding: 20px 10px;
-    flex: 1; /* Allow the content to grow and shrink */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .content p {
     margin: 20px auto;
@@ -82,7 +72,9 @@ body, html {
 
 .chart {
     position: relative;
-    margin: 20px auto;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
     border: double #009688;
     color: #fff;
     padding: 10px;
@@ -95,7 +87,7 @@ th, td {
 }
 
 .copy {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
@@ -103,11 +95,10 @@ th, td {
     text-align: center;
     padding: 10px;
     width: 100%;
-    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-    .navbar {
+      .navbar {
         width: 100%;
         padding: 20px 0;
     }
@@ -115,9 +106,8 @@ th, td {
     .navbar ul li {
         margin: 10px 10px;
     }
-
     .content {
-        padding: 20px 10px;
+        top: 40%;
     }
 
     .content p {
@@ -125,6 +115,7 @@ th, td {
     }
 
     .chart {
+        bottom: 20%;
         padding: 5px;
     }
 
@@ -138,12 +129,12 @@ th, td {
 }
 
 @media (max-width: 480px) {
-    .navbar {
+     .navbar {
         padding: 10px 0;
     }
 
     .content {
-        padding: 20px 10px;
+        top: 45%;
     }
 
     .content p {
@@ -151,6 +142,7 @@ th, td {
     }
 
     .chart {
+        bottom: 25%;
         padding: 5px;
     }
 
