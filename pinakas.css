@@ -71,7 +71,7 @@ body, html {
 }
 
 .chart {
-    position: relative;
+    position: absolute;
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
