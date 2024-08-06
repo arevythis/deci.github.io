@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
   
   .banner {
@@ -59,6 +61,7 @@ body, html {
           text-align: center;
           color:#fff;
            padding: 0 10px;
+           box-sizing: border-box;
        
       }
       .content h1{
@@ -144,6 +147,9 @@ body, html {
     .navbar {
         padding: 10px 0;
     }
+    .content{
+        top:50%;
+     padding-bottom: 60px;
 
     .content h1 {
         font-size: 30px;
