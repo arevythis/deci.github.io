@@ -1,68 +1,78 @@
 body, html {
     height: 100%;
     margin: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .banner {
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
-    height: 100%;
+    min-height: 100%; /* Ensure the banner covers at least the viewport height */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
-    .navbar{
-     width: 100%;
-    margin: auto;
+
+.navbar {
+    width: 100%;
     padding: 20px 0;
     text-align: center;
-    position:absolute;
+    position: fixed; /* Fixed to top */
     top: 0;
     left: 0;
     right: 0;
-      }
-      .navbar ul li{
-          list-style: none;
-          display:inline-block;
-          margin: 0 10px;
-          position: relative;
-      }
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it stays on top */
+}
+
 .navbar ul {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-      .navbar ul li a{
-          text-decoration: none;
-          color: white;
-          text-transform: uppercase;
-  
-      }
-      .navbar ul li::after{
-          content: '';
-          height: 3px;
-          width: 0;
-          background: #009688;
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          transition: 0.5s;
-  
-      }
-      .navbar ul li:hover:after{
-          width: 100%;
-      }
-      .content{
-          width:100%;
-          position: absolute;
-          top:10%;
-          transform: translateY(-50%);
-          text-align: center;
-          color:#fff;
-           padding: 0 10px;
-          margin-top:60px;
-   
-      }
 
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px;
+    margin-top: 80px; /* Adjust for the fixed navbar height */
+    z-index: 900;
+    flex: 1; /* Allow to grow and shrink */
+}
 
 .content p {
     margin: 20px auto;
@@ -72,15 +82,14 @@ body, html {
 }
 
 .chart {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 20px auto;
     border: double #009688;
     color: #fff;
     padding: 10px;
     text-align: center;
-   overflow:hidden;
+    overflow: hidden;
+    position: relative; /* Relative positioning for proper layout flow */
+    z-index: 800;
 }
 
 th, td {
@@ -88,7 +97,7 @@ th, td {
 }
 
 .copy {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
@@ -96,19 +105,21 @@ th, td {
     text-align: center;
     padding: 10px;
     width: 100%;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
-      .navbar {
-        width: 100%;
-        padding: 20px 0;
+    .navbar {
+        padding: 10px 0;
     }
 
     .navbar ul li {
-        margin: 10px 10px;
+        margin: 5px 5px;
     }
+
     .content {
-        top: 40%;
+        margin-top: 60px; /* Adjust for the fixed navbar height */
+        padding: 10px;
     }
 
     .content p {
@@ -116,7 +127,6 @@ th, td {
     }
 
     .chart {
-        bottom: 20%;
         padding: 5px;
     }
 
@@ -130,12 +140,13 @@ th, td {
 }
 
 @media (max-width: 480px) {
-     .navbar {
+    .navbar {
         padding: 10px 0;
     }
 
     .content {
-        top: 45%;
+        margin-top: 60px; /* Adjust for the fixed navbar height */
+        padding: 10px;
     }
 
     .content p {
@@ -143,7 +154,6 @@ th, td {
     }
 
     .chart {
-        bottom: 25%;
         padding: 5px;
     }
 
