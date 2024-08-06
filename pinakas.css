@@ -69,6 +69,7 @@ body, html {
     text-align: center;
     color: #fff;
     padding: 0 10px;
+    z-index: 900;
 }
 
 .content p {
@@ -87,6 +88,7 @@ body, html {
     color: #fff;
     padding: 10px;
     text-align: center;
+    z-index: 800;
 }
 
 th, td {
