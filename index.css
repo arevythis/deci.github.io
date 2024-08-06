@@ -118,11 +118,14 @@ body, html {
     width: 100%;
 }
 @media (max-width: 768px) {
-    .navbar ul li {
-        display:inline-block;
-        margin: 10px 0;
+     .navbar {
+        width: 100%;
+        padding: 20px 0;
     }
 
+    .navbar ul li {
+        margin: 10px 10px;
+    }
     .content h1 {
         font-size: 40px;
     }
