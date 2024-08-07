@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .banner {
@@ -14,6 +14,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .navbar {
