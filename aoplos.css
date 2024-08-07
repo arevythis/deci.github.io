@@ -56,7 +56,7 @@ body, html {
       .content{
           width:100%;
           position: absolute;
-          top:10%;
+          top:30%;
           transform: translateY(-50%);
           text-align: center;
           color:#fff;
