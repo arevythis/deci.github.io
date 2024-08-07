@@ -1,69 +1,69 @@
-body, html {
+html, body {
     height: 100%;
     margin: 0;
-    padding:0;
-    overflow-x:hidden;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 .banner {
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
-    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('image/image.jpg');
+    min-height: 100vh; /* Ensure the banner covers the full viewport height */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.navbar{
-     width: 100%;
+.navbar {
+    width: 100%;
     margin: auto;
     padding: 20px 0;
     text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-      }
-      .navbar ul li{
-          list-style: none;
-          display:inline-block;
-          margin: 0 10px;
-          position: relative;
-      }
+}
+
 .navbar ul {
     padding: 0;
     margin: 0;
 }
-      .navbar ul li a{
-          text-decoration: none;
-          color: white;
-          text-transform: uppercase;
-  
-      }
-      .navbar ul li::after{
-          content: '';
-          height: 3px;
-          width: 0;
-          background: #009688;
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          transition: 0.5s;
-  
-      }
-      .navbar ul li:hover:after{
-          width: 100%;
-      }
-      .content{
-          width:100%;
-          position: absolute;
-          top:50%;
-          transform: translateY(-50%);
-          text-align: center;
-          color:#fff;
-           padding: 0 10px;
-          box-sizing:border-box;
-       
-      }
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 20px 10px; /* Add padding for better spacing */
+    box-sizing: border-box;
+    flex: 1; /* Allow content to grow and shrink */
+}
 
 .content p {
     margin: 20px auto;
@@ -73,27 +73,21 @@ body, html {
 }
 
 .video {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-sizing:border-box;
-    padding:10px;
+    text-align: center; /* Center the video */
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .copy {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
     color: #fff;
     text-align: center;
     padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
     .navbar {
-        width: 100%;
         padding: 20px 0;
     }
 
@@ -101,17 +95,12 @@ body, html {
         margin: 10px 10px;
     }
 
-    .content {
-        top: 40%;
-        padding: 0 10px;
-    }
-
     .content p {
         font-size: 20px;
     }
 
     .video {
-        bottom: 15%;
+        padding: 10px;
     }
 
     .copy {
@@ -124,17 +113,11 @@ body, html {
         padding: 10px 0;
     }
 
-    .content {
-        top: 45%;
-        padding: 0 10px;
-    }
-
     .content p {
         font-size: 18px;
     }
 
     .video {
-        bottom: 20%;
         padding: 5px;
     }
 
