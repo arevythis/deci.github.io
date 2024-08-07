@@ -59,6 +59,7 @@ body, html {
           text-align: center;
           color:#fff;
            padding: 0 10px;
+          box-sizing:border-box;
        
       }
 
