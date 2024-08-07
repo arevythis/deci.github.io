@@ -113,6 +113,7 @@ body, html {
     .video {
         width:60%;
         bottom: 15%;
+        left:30%;
     }
 
     .copy {
@@ -138,6 +139,7 @@ body, html {
         width:50%;
         bottom: 20%;
         padding: 5px;
+        left:30%;
     }
 
     .copy {
