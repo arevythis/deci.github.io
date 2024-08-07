@@ -1,6 +1,8 @@
 body, html {
     height: 100%;
     margin: 0;
+    padding:0;
+    overflow-x:hidden;
 }
 
 .banner {
@@ -75,6 +77,8 @@ body, html {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
+    border-sizing:border-box;
+    padding:10px;
 }
 
 .copy {
