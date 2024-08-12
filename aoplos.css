@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     padding:0;
     overflow-x:hidden;
+    background-color: black;
 }
 
 .banner {
@@ -11,6 +12,11 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    flex-direction: column;
+    justify-content:flex-start; 
+    align-items: center;
+    padding-top: 20px;
+    
 }
 
 .navbar{
@@ -55,13 +61,13 @@ body, html {
       }
       .content{
           width:100%;
-          position: absolute;
-          top:30%;
           transform: translateY(-50%);
           text-align: center;
           color:#fff;
-           padding: 0 10px;
+           padding: 20px 10px;
           box-sizing:border-box;
+          margin-top:-500px;
+       
        
       }
 
@@ -73,12 +79,14 @@ body, html {
 }
 
 .video {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-sizing:border-box;
-    padding:10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.video video{
+    max-width:100%;
+
 }
 
 .copy {
@@ -111,9 +119,7 @@ body, html {
     }
 
     .video {
-        width:60%;
-        bottom: 15%;
-        left:30%;
+       margin-top:15px;
     }
 
     .copy {
@@ -136,10 +142,10 @@ body, html {
     }
 
     .video {
-        width:50%;
-        bottom: 20%;
+    
         padding: 5px;
         left:30%;
+        margin-top: 15px;
     }
 
     .copy {
