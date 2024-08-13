@@ -1,31 +1,44 @@
 body, html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  .banner {
    
-    background-image:linear-gradient(rgba(0,0,,0,0.75),rgba(0,0,0,0.75)),  url("image/image.jpg");
-    height: 100%; 
+    margin: 0;
+    padding:0;
+    overflow-x:hidden;
+    background-color: black;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
+    min-height:100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
-  }
-      .navbar{
-          float: right;
-          width: 85%;
-          margin: auto;
-          padding: 35px 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+    background-size: cover;
+    flex-direction: column;
+    justify-content:flex-start; 
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+.navbar{
+     width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
       }
       .navbar ul li{
           list-style: none;
-          display: inline-block;
-          margin: 0 20px;
+          display:inline-block;
+          margin: 0 10px;
           position: relative;
       }
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
       .navbar ul li a{
           text-decoration: none;
           color: white;
@@ -48,29 +61,94 @@ body, html {
       }
       .content{
           width:100%;
-          position: absolute;
-          top:30%;
           transform: translateY(-50%);
           text-align: center;
           color:#fff;
+           padding: 20px 10px;
+          box-sizing:border-box;
+          margin-top:-400px;
+       
+       
       }
-     
-      .content p{
-          margin:20px auto;
-          font-weight: 100;
-          line-height: 25px;
-          font-size: 23px;
-  
-  
-      }
-      .video{
-          position:absolute;
-  bottom:10%;
-  left:35%;
-      }
-      .copy{
-          position:absolute;
-          bottom:0px;
-          left:46%;
-          color: #fff;
-      }
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 23px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.video video{
+    max-width:100%;
+
+}
+
+.copy {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 10px;
+    }
+
+    .content {
+        top: 40%;
+        padding: 0 10px;
+    }
+
+    .content p {
+        font-size: 20px;
+    }
+
+    .video {
+       margin-top:15px;
+    }
+
+    .copy {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .content {
+        top: 45%;
+        padding: 0 10px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+
+    .video {
+    
+        padding: 5px;
+        left:30%;
+        margin-top: 15px;
+    }
+
+    .copy {
+        font-size: 10px;
+    }
+}
