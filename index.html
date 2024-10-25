@@ -34,6 +34,7 @@
                         <label for="email">Email:</label>
                         <input type="email" id="email" required>
                         <button type="submit"><span></span>SUBSCRIBE</button>
+                        <p class="error-message" id="error-message"></p>
                         
                      
                     </form>
@@ -56,14 +57,24 @@
                 let subscribers = JSON.parse(localStorage.getItem('subscribers')) || [];
 
               
-                subscribers.push(subscriber);
+                const emailExists = subscribers.some(subscriber => subscriber.email === email);
 
-                localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                if (emailExists) {
+                   
+                    document.getElementById('error-message').textContent = 'You are already subscribed!';
+                } else {
+                   
+                    const subscriber = { name, email };
+                    subscribers.push(subscriber);
 
-                window.location.href = 'subscribe.html';
+                   
+                    localStorage.setItem('subscribers', JSON.stringify(subscribers));
+
+                    
+                    window.location.href = 'subscribe.html';
+                }
             });
-        </script>
-   
+            </script>
 
     </body>
 </html>
