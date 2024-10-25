@@ -110,6 +110,10 @@ body, html {
       button:hover{
           border:none;
       }
+      .error-message {
+        color:red;
+
+      }
      .copy {
     position: absolute;
     bottom: 0px;
@@ -141,6 +145,11 @@ body, html {
         width: 120px;
         padding: 8px 0;
     }
+    .subscribe-form{
+        display:flex;
+        flex-direction:column;
+        
+    }
 }
 
 @media (max-width: 480px) {
@@ -162,6 +171,11 @@ body, html {
     button {
         width: 100px;
         padding: 5px 0;
+    }
+    .subscribe-form{
+        display:flex;
+        flex-direction:column;
+        
     }
 
     .copy {
