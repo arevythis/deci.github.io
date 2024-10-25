@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DECIBEL</title>
     <link rel="stylesheet" href="index.css">
     </head>
-<body>   
-    <div class="navbar">
+  <body>
+        <div class="navbar">
       
             <ul>
                 <li><a href="index.html">ΠΟΙΟΣ ΕΙΝΑΙ</a></li>
@@ -15,8 +15,7 @@
                 <li><a href="signup.html">ΓΙΝΕ ΜΕΛΟΣ</a></li>
             </ul>
         </div>
-        <div class="banner">
-                            </div>
+        <div class="banner"></div>
             <div class="content">
                 <h1>ΠΟΙΟΣ ΕΙΝΑΙ Ο DECIBEL</h1>
                 <p>Η ύπαρξη του <strong>Decibel</strong> κατά μία έννοια θεωρείται ανωμαλία,
@@ -28,12 +27,42 @@
                 στην ταυτότητα της μουσικής του, σαν μία αέναη μάχη μεταξύ αξιών δύο 
                 διαφορετικών γεννεών φιλοσοφικών γιγάντων.</p>
                 <div>
-                   <button role="https://www.youtube.com/@decibel4119"><span></span>
-                    SUBSCRIBE
-                    </button>
+                    <form id="subscribe-form">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <button type="submit"><span></span>SUBSCRIBE</button>
+                        
+                     
+                    </form>
+                  
+                   
                 </div>
             </div>
            <div class="copy"> <p>&copy;Decibel 2024</p></div>
+           <script>
+            document.getElementById('subscribe-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+
+                const subscriber = { name, email };
+
+               
+                let subscribers = JSON.parse(localStorage.getItem('subscribers')) || [];
+
+              
+                subscribers.push(subscriber);
+
+                localStorage.setItem('subscribers', JSON.stringify(subscribers));
+
+                window.location.href = 'subscribe.html';
+            });
+        </script>
    
 
     </body>
