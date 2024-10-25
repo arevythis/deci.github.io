@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DECIBEL</title>
+    <link rel="stylesheet" href="subscribe.css">
+    </head>
+  <body>
+    <div class="banner"></div>
+    <body>
+        <div class="message-container">
+            <p>Subscribed successfully.</p>
+            <p>Redirecting in <span id="countdown">5</span> seconds...</p>
+        </div>
+
+        <script>
+            let countdownTime = 5;
+
+            const countdownElement = document.getElementById('countdown');
+            const countdownInterval = setInterval(function() {
+                countdownTime--;
+                countdownElement.textContent = countdownTime;
+
+              
+                if (countdownTime <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'index.html';
+                }
+            }, 1000); 
+        </script>
+    </body>
+</html>
+
