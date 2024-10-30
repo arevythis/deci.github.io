@@ -1,80 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DECIBEL</title>
     <link rel="stylesheet" href="index.css">
-    </head>
-  <body>
-        <div class="navbar">
-      
-            <ul>
-                <li><a href="index.html">ΠΟΙΟΣ ΕΙΝΑΙ</a></li>
-                <li><a href="pinakas.html">Ο ΑΝΤΑΓΩΝΙΣΜΟΣ</a></li>
-                <li><a href="aoplos.html">BEST HIT</a></li>
-                <li><a href="signup.html">ΓΙΝΕ ΜΕΛΟΣ</a></li>
-            </ul>
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">ΠΟΙΟΣ ΕΙΝΑΙ</a></li>
+            <li><a href="pinakas.html">Ο ΑΝΤΑΓΩΝΙΣΜΟΣ</a></li>
+            <li><a href="aoplos.html">BEST HIT</a></li>
+            <li><a href="subscribers.html">ΜΕΛΗ</a></li>
+            <li><button id="login-logout-button" onclick="handleLoginLogout()">LOG IN</button></li>
+        </ul>
+    </div>
+
+    <div class="banner"></div>
+    <div class="content">
+        <h1>ΠΟΙΟΣ ΕΙΝΑΙ Ο DECIBEL</h1>
+        <p>Η ύπαρξη του <strong>Decibel</strong> κατά μία έννοια θεωρείται ανωμαλία,
+            εφόσον κανείς δεν κατάφερε να συλλέξει πληροφορίες για την ιστορία ή την
+        ταυτότητα του προσώπου, παρά μόνο τον συμβολισμό της μουσικής του που παρακινεί
+        τάσεις  <em>μεταμοντερνισμού</em> και <em>μεταστρουκτουραλισμού.</em> Πέραν όσεων
+        φιλοσοφιών γύρω από τον <em>υπαρξισμό</em> και τον <em>προοπτικισμό,</em>
+        η περσόνα <strong>Decibel</strong> δεν παραλείπτει να χαρίσει ύφος <strong>εφήμερο</strong>
+        στην ταυτότητα της μουσικής του, σαν μία αέναη μάχη μεταξύ αξιών δύο 
+        διαφορετικών γεννεών φιλοσοφικών γιγάντων.</p>
+        <div>
+            <form id="subscribe-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required><br><br>
+                <button type="submit">SUBSCRIBE</button>
+                <p class="error-message" id="error-message"></p>
+            </form>
         </div>
-        <div class="banner"></div>
-            <div class="content">
-                <h1>ΠΟΙΟΣ ΕΙΝΑΙ Ο DECIBEL</h1>
-                <p>Η ύπαρξη του <strong>Decibel</strong> κατά μία έννοια θεωρείται ανωμαλία,
-                    εφόσον κανείς δεν κατάφερε να συλλέξει πληροφορίες για την ιστορία ή την
-                ταυτότητα του προσώπου, παρά μόνο τον συμβολισμό της μουσικής του που παρακινεί
-                τάσεις  <em>μεταμοντερνισμού</em> και <em>μεταστρουκτουραλισμού.</em> Πέραν όσεων
-                φιλοσοφιών γύρω από τον <em>υπαρξισμό</em> και τον <em>προοπτικισμό,</em>
-                η περσόνα <strong>Decibel</strong> δεν παραλείπτει να χαρίσει ύφος <strong>εφήμερο</strong>
-                στην ταυτότητα της μουσικής του, σαν μία αέναη μάχη μεταξύ αξιών δύο 
-                διαφορετικών γεννεών φιλοσοφικών γιγάντων.</p>
-                <div>
-                    <form id="subscribe-form">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" required> <br> <br>
-                        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required> <br> <br>
-                        <button type="submit"><span></span>SUBSCRIBE</button>
-                        <p class="error-message" id="error-message"></p>
-                        
-                     
-                    </form>
-                  
-                   
-                </div>
-            </div>
-           <div class="copy"> <p>&copy;Decibel 2024</p></div>
-           <script>
-            document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-                event.preventDefault(); 
-                
-                
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
+    </div>
 
-                const subscriber = { name, email };
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Log In</h2>
+            <form id="login-form">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required><br><br>
+                <button type="submit">Log In</button>
+                <p class="error-message" id="login-error-message"></p>
+            </form>
+        </div>
+    </div>
 
-               
-                let subscribers = JSON.parse(localStorage.getItem('subscribers')) || [];
+    <div id="user-greeting" style="display:none;">
+        <p>Welcome, <span id="greeting-message"></span>!</p>
+    </div>
 
-              
-                const emailExists = subscribers.some(subscriber => subscriber.email === email);
+    <div class="copy"> <p>&copy;Decibel 2024</p></div>
 
-                if (emailExists) {
-                   
-                    document.getElementById('error-message').textContent = 'You are already subscribed!';
-                } else {
-                   
-                    const subscriber = { name, email };
-                    subscribers.push(subscriber);
-
-                   
-                    localStorage.setItem('subscribers', JSON.stringify(subscribers));
-
-                    
-                    window.location.href = 'subscribe.html';
-                }
-            });
-            </script>
-
-    </body>
+</body>
 </html>
