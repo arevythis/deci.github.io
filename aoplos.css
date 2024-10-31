@@ -159,6 +159,8 @@ button span{
     .navbar {
         width: 100%;
         padding: 20px 0;
+       position:fixed;
+       
     }
 
     .navbar ul li {
@@ -168,6 +170,7 @@ button span{
     .content {
         top: 40%;
         padding: 0 10px;
+       padding-top:80px;
     }
 
     .content p {
@@ -186,11 +189,13 @@ button span{
 @media (max-width: 480px) {
     .navbar {
         padding: 10px 0;
+       position:fixed;
     }
 
     .content {
         top: 45%;
         padding: 0 10px;
+       padding-top:80px;
     }
 
     .content p {
