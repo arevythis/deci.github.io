@@ -97,5 +97,3 @@ window.onload = function() {
 };
 
 
-    checkLoginStatus();
-};
