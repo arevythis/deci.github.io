@@ -84,16 +84,14 @@ function logOut() {
     checkLoginStatus();
 }
 
-window.onload = function() {
-           
+document.addEventListener('DOMContentLoaded', function() {
+    // Only run modal check on DOM load
     if (localStorage.getItem('showModal') === 'true') {
-    
         localStorage.removeItem('showModal');
-
         openLoginModal();
     }
+});
 
+window.onload = function() {
     checkLoginStatus();
 };
-
-
