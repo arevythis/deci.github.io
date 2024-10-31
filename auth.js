@@ -84,6 +84,18 @@ function logOut() {
     checkLoginStatus();
 }
 
+window.onload = function() {
+           
+    if (localStorage.getItem('showModal') === 'true') {
+    
+        localStorage.removeItem('showModal');
+
+        openLoginModal();
+    }
+
+    checkLoginStatus();
+};
+
 
     checkLoginStatus();
 };
