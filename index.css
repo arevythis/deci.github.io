@@ -147,9 +147,14 @@ body, html {
 }
 @media (max-width: 768px) {
      .navbar {
-        width: 100%;
-        padding: 20px 0;
-    }
+    width: 100%;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
 
     .navbar ul li {
         margin: 10px 10px;
@@ -170,8 +175,14 @@ body, html {
 
 @media (max-width: 480px) {
     .navbar {
-        padding: 10px 0;
-    }
+    width: 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 10px 0;
+}
     .content{
         top:50%;
          padding-bottom: 60px;}
