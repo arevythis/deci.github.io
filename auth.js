@@ -83,14 +83,7 @@ function logOut() {
     localStorage.removeItem('loggedInUser');
     checkLoginStatus();
 }
-window.onload = function() {
-           
-    if (localStorage.getItem('showModal') === 'true') {
-    
-        localStorage.removeItem('showModal');
 
-        openLoginModal();
-    }
 
     checkLoginStatus();
 };
