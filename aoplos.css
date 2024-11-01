@@ -77,7 +77,7 @@ button span{
      border:none;
  }
 
-html body .navbar{
+html body.navbar{
      width: 100%;
     margin: auto;
     padding: 20px 0;
