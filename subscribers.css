@@ -71,15 +71,16 @@ button span{
     margin:auto;
 
 }
-    .navbar{
+   html body .navbar{
      width: 100%;
     margin: auto;
     padding: 20px 0;
     text-align: center;
-    position:absolute;
+    position:fixed;
     top: 0;
     left: 0;
     right: 0;
+       z-index:1000;
       }
       .navbar ul li{
           list-style: none;
