@@ -15,7 +15,7 @@ body, html {
     flex-direction: column;
     justify-content:flex-start; 
     align-items: center;
-    padding-top: 20px;
+    padding-top: 80px;
     
 }
   .modal {
@@ -126,8 +126,8 @@ button span{
           color:#fff;
            padding: 20px 10px;
           box-sizing:border-box;
-          margin-top:-400px;
-       position:absolute;
+      
+     
        
       }
 
