@@ -159,15 +159,6 @@ html body.navbar{
 }
 
 @media (max-width: 768px) {
-      .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 1000; 
-    
-    padding: 10px 0;
-}
 
     .navbar ul li {
         margin: 10px 10px;
@@ -192,15 +183,7 @@ html body.navbar{
 }
 
 @media (max-width: 480px) {
-   .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 1000; 
-    
-    padding: 10px 0;
-}
+
 
 
     .content {
