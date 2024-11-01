@@ -1,18 +1,22 @@
 body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-  
-  .banner {
    
-    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(image/image.jpg);
-    min-height: 100vh; 
+    margin: 0;
+    padding:0;
+    overflow-x:hidden;
+    background-color: black;
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(image/image.jpg);
+    min-height:100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size:cover;
-  }
+    background-size: cover;
+    flex-direction: column;
+    justify-content:flex-start; 
+    align-items: center;
+  
+}
   .modal {
     display: none; 
     position: fixed; 
@@ -40,7 +44,40 @@ body, html {
     margin:auto;
 
 }
-   html body   .navbar{
+button{
+    width: 150px;
+padding: 10px 0;
+text-align: center;
+margin: 10px 5px;
+border-radius: 25px;
+font-weight: bold;
+border: 2px solid #009688;
+background: transparent;
+color: #fff;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+ }
+button span{
+     background: #009688;
+     height: 100%;
+     width:0;
+     border-radius: 25px;
+     position:absolute;
+     left:0;
+     bottom:0;
+     z-index: -1;
+     transition: 0.5s;
+ }
+ button:hover span{
+     width:100%;
+
+ }
+ button:hover{
+     border:none;
+ }
+
+html body.navbar{
      width: 100%;
     margin: auto;
     padding: 20px 0;
@@ -49,7 +86,7 @@ body, html {
     top: 0;
     left: 0;
     right: 0;
-       z-index:1000;
+   z-index:1000;
       }
       .navbar ul li{
           list-style: none;
@@ -83,13 +120,13 @@ body, html {
       }
       .content{
           width:100%;
-          position: absolute;
-          top:50%;
           transform: translateY(-50%);
           text-align: center;
           color:#fff;
-           padding: 0 10px;
-           box-sizing: border-box;
+           padding: 20px 10px;
+          box-sizing:border-box;
+      
+     
        
       }
       .content h1{
@@ -150,15 +187,7 @@ body, html {
     width: 100%;
 }
 @media (max-width: 768px) {
-     .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0; 
-    left: 0;
-    z-index: 1000; 
-    
-    padding: 10px 0;
-}
+
 
     .navbar ul li {
         margin: 10px 10px;
@@ -178,15 +207,7 @@ body, html {
 }
 
 @media (max-width: 480px) {
-    .navbar {
-    width: 100%;
-    position: fixed; 
-    top: 0; 
-    left: 0;
-    z-index: 1000; 
-    
-    padding: 10px 0;
-}
+
     .content{
         top:50%;
          padding-bottom: 60px;}
