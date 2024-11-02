@@ -17,33 +17,10 @@ body, html {
     align-items: center;
   
 }
-  .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-   
-    background-color: rgba(0,0,0,0.4); 
-    padding-top: 60px;
-    color:white;
-    backdrop-filter: blur(5px);
-}
+ 
 
 
-.modal-content {
-    
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px; 
-    margin:auto;
 
-}
 button{
     width: 150px;
 padding: 10px 0;
@@ -77,17 +54,20 @@ button span{
      border:none;
  }
 
-html body.navbar{
-     width: 100%;
-    margin: auto;
-    padding: 20px 0;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-   z-index:1000;
-      }
+.navbar{
+    width: 100%;
+   margin: auto;
+   padding: 20px 0;
+   text-align: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: black;
+   
+   
+  
+     }
       .navbar ul li{
           list-style: none;
           display:inline-block;
