@@ -13,7 +13,7 @@
             <li><a href="pinakas.html">Ο ΑΝΤΑΓΩΝΙΣΜΟΣ</a></li>
             <li><a href="aoplos.html">BEST HIT</a></li>
             <li><a href="subscribers.html">ΜΕΛΗ</a></li>
-            <li><button id="login-logout-button" onclick="handleLoginLogout()">LOG IN</button></li>
+              <li><a id="login-logout-link" href="#">LOG IN</a></li>
         </ul>
     </div>
 
@@ -28,37 +28,12 @@
         η περσόνα <strong>Decibel</strong> δεν παραλείπτει να χαρίσει ύφος <strong>εφήμερο</strong>
         στην ταυτότητα της μουσικής του, σαν μία αέναη μάχη μεταξύ αξιών δύο 
         διαφορετικών γεννεών φιλοσοφικών γιγάντων.</p>
-        <div>
-            <form id="subscribe-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required><br><br>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required><br><br>
-                <button type="submit">SUBSCRIBE</button>
-                <p class="error-message" id="error-message"></p>
-            </form>
-        </div>
+      
+  
     </div>
 
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeLoginModal()">&times;</span>
-            <h2>Log In</h2>
-            <form id="login-form">
-                <label for="login-email">Email:</label>
-                <input type="email" id="login-email" required><br><br>
-                <button type="submit">Log In</button>
-                <p class="error-message" id="login-error-message"></p>
-            </form>
-        </div>
-    </div>
+  
 
-    <div id="user-greeting" style="display:none;">
-        <p>Welcome, <span id="greeting-message"></span>!</p>
-    </div>
-
-   
 
 </body>
 </html>
