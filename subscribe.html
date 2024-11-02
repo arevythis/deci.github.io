@@ -7,31 +7,37 @@
     <script src="auth.js" defer></script>
     </head>
   <body>
+   
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">ΠΟΙΟΣ ΕΙΝΑΙ</a></li>
+            <li><a href="pinakas.html">Ο ΑΝΤΑΓΩΝΙΣΜΟΣ</a></li>
+            <li><a href="aoplos.html">BEST HIT</a></li>
+            <li><a href="subscribe.html">SUBSCRIBE</a></li>
+         <li><a id="login-logout-link" href="#">LOG IN</a></li>
+        </ul>
+    </div>
     <div class="banner"></div>
-    <body>
-        <div class="message-container">
-            <p>Subscribed successfully.</p>
-            <p>Redirecting in <span id="countdown">5</span> seconds...</p>
-        </div>
-
-        <script>
-            let countdownTime = 5;
+    
+    <div class="content">
+        <h1>Become a member of the family!</h1>
+        <form id="subscribe-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+       
+        <label for="email">Email:</label>
+     <input type="email" id="email" required><br><br>
+        <button type="submit">SUBSCRIBE</button>
+         <p class="error-message" id="error-message"></p>
+       </form>
+       </div>
+       <div id="user-greeting" style="display:none;">
+        <p>Welcome, <span id="greeting-message"></span>!</p>
+    </div>
+       
+     
         
-            const countdownElement = document.getElementById('countdown');
-            const countdownInterval = setInterval(function() {
-                countdownTime--;
-                countdownElement.textContent = countdownTime;
-        
-                if (countdownTime <= 0) {
-                    clearInterval(countdownInterval);
-                  
-                    localStorage.setItem('showModal', 'true');
-                    window.location.href = 'index.html';
-                }
-            }, 1000); 
-        </script>
     </body>
 </html>
-
 
 
